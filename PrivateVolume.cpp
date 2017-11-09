@@ -162,7 +162,7 @@ status_t PrivateVolume::doMount() {
     return OK;
 }
 
-status_t PrivateVolume::doUnmount(bool detach /* = false */) {
+status_t PrivateVolume::doUnmount() {
     ForceUnmount(mPath);
 
     if (TEMP_FAILURE_RETRY(rmdir(mPath.c_str()))) {

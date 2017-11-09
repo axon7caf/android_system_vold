@@ -95,9 +95,7 @@ bool KeymasterOperation::finish(std::string* output) {
 }
 
 Keymaster::Keymaster() {
-#ifndef MINIVOLD
     mDevice = ::android::hardware::keymaster::V3_0::IKeymasterDevice::getService();
-#endif
 }
 
 bool Keymaster::generateKey(const AuthorizationSet& inParams, std::string* key) {
